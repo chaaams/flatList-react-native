@@ -19,8 +19,8 @@ function List (){
             
             renderItem={({item}) =>(
                 <View style={styles.item}> 
-                    {/* <Image>{item.flags.svg}</Image> */}
-                    <Text style={styles.item}>{item.name.common}, {item.capital}</Text>
+                    
+                    <Text style={styles.item}><Image style={styles.img}source={item.flags.svg}/> {item.name.common}, {item.capital}</Text>
                 </View>
             )} 
             />
@@ -39,5 +39,12 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         overflow:'hidden'
       },
+      img:{
+        padding: 10,
+        width: 20,
+        height:20,
+        // marginVertical: 8,
+        // marginHorizontal: 16,
+      }
 })
 export default List
